@@ -1,456 +1,546 @@
-    /* http://meyerweb.com/eric/tools/css/reset/ 
+        /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-    
-    html,
-    body,
-    div,
-    span,
-    applet,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    a,
-    abbr,
-    acronym,
-    address,
-    big,
-    cite,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    s,
-    samp,
-    small,
-    strike,
-    strong,
-    sub,
-    sup,
-    tt,
-    var,
-    b,
-    u,
-    i,
-    center,
-    dl,
-    dt,
-    dd,
-    ol,
-    ul,
-    li,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    caption,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td,
-    article,
-    aside,
-    canvas,
-    details,
-    embed,
-    figure,
-    figcaption,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    output,
-    ruby,
-    section,
-    summary,
-    time,
-    mark,
-    audio,
-    video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-    }
-    /* HTML5 display-role reset for older browsers */
-    
-    article,
-    aside,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    section {
-        display: block;
-    }
-    
-    body {
-        line-height: 1;
-    }
-    
-    ol,
-    ul {
-        list-style: none;
-    }
-    
-    blockquote,
-    q {
-        quotes: none;
-    }
-    
-    blockquote:before,
-    blockquote:after,
-    q:before,
-    q:after {
-        content: '';
-        content: none;
-    }
-    
-    table {
-        border-collapse: collapse;
-        border-spacing: 0;
-    }
-    /* archivo-regular - latin */
-    
-    @font-face {
-        font-family: 'Archivo';
-        font-style: normal;
-        font-weight: 400;
-        src: url('../fonts/archivo-v16-latin-regular.eot');
-        /* IE9 Compat Modes */
-        src: local(''), url('../fonts/archivo-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/archivo-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/archivo-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
-        url('../fonts/archivo-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('../fonts/archivo-v16-latin-regular.svg#Archivo') format('svg');
-        /* Legacy iOS */
-    }
-    /* archivo-500 - latin */
-    
-    @font-face {
-        font-family: 'Archivo';
-        font-style: normal;
-        font-weight: 500;
-        src: url('../fonts/archivo-v16-latin-500.eot');
-        /* IE9 Compat Modes */
-        src: local(''), url('../fonts/archivo-v16-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/archivo-v16-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/archivo-v16-latin-500.woff') format('woff'), /* Modern Browsers */
-        url('../fonts/archivo-v16-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('../fonts/archivo-v16-latin-500.svg#Archivo') format('svg');
-        /* Legacy iOS */
-    }
-    /* archivo-600 - latin */
-    
-    @font-face {
-        font-family: 'Archivo';
-        font-style: normal;
-        font-weight: 600;
-        src: url('../fonts/archivo-v16-latin-600.eot');
-        /* IE9 Compat Modes */
-        src: local(''), url('../fonts/archivo-v16-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/archivo-v16-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/archivo-v16-latin-600.woff') format('woff'), /* Modern Browsers */
-        url('../fonts/archivo-v16-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('../fonts/archivo-v16-latin-600.svg#Archivo') format('svg');
-        /* Legacy iOS */
-    }
-    /* archivo-700 - latin */
-    
-    @font-face {
-        font-family: 'Archivo';
-        font-style: normal;
-        font-weight: 700;
-        src: url('../fonts/archivo-v16-latin-700.eot');
-        /* IE9 Compat Modes */
-        src: local(''), url('../fonts/archivo-v16-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/archivo-v16-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/archivo-v16-latin-700.woff') format('woff'), /* Modern Browsers */
-        url('../fonts/archivo-v16-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('../fonts/archivo-v16-latin-700.svg#Archivo') format('svg');
-        /* Legacy iOS */
-    }
-    
-    html {
-        box-sizing: border-box;
-    }
-    
-    *,
-    *::before,
-    *::after {
-        box-sizing: inherit;
-    }
-    
-    body {
-        font-family: 'Archivo';
-        font-style: normal;
-        font-weight: normal;
-        color: #0D0E14;
-        background-color: #FBFDFE;
-    }
-    
-    .wrapper {
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
-    
-    .header {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 92px;
-        transition: .2s linear;
-    }
-    
-    .header__wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        padding-left: 70px;
-        padding-right: 70px;
-        padding-top: 26px;
-    }
-    
-    .header__logo {
-        display: flex;
-        align-items: center;
-    }
-    
-    .header__list {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-    
-    .header__item {
-        margin-right: 24px;
-    }
-    
-    .header__item:last-child {
-        margin-right: 0;
-    }
-    
-    .header__link {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-        color: #000000;
-        text-decoration: none;
-    }
-    
-    #plans {
-        top: 7.4px;
-        left: 5.63px;
-        border: 0;
-    }
-    
-    .header__link:hover,
-    .header__link:focus,
-    .header__link:active {
-        opacity: .75;
-    }
-    
-    .button_thumb {
-        width: 130px;
-        height: 44px;
-        left: 0px;
-        top: 0px;
-        border-radius: 4px;
-        box-shadow: 0px -1px 4px 0px #00000029 inset;
-        background: #B794F4;
-        box-shadow: 0px -1px rgba(0, 0, 0, 0.16) inset;
-        border-radius: 4px;
-        border: 0;
-        text-decoration: none;
-        color: #fff;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-        cursor: pointer;
-    }
-    
-    .button_thumb:hover,
-    .button_thumb:active,
-    .button_thumb:focus {
-        background: #6249ab
-    }
-    /* Header styles end */
-    /* Intro styles start */
-    
-    .intro {
-        margin-bottom: 120px;
-    }
-    
-    .intro_wrap {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 39px;
-        align-items: center;
-        background: url(../img/background-vector.jpg) no-repeat center;
-    }
-    
-    .intro_info {
-        width: 523x;
-        height: 388px;
-        top: 231px;
-        padding-left: 70px;
-    }
-    
-    .intro_title {
-        width: 523px;
-        height: 240px;
-        font-weight: 700;
-        font-size: 64px;
-        line-height: 80px;
-        margin-bottom: 16px;
-    }
-    
-    .intro_subtitle {
-        width: 523px;
-        height: 48px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: rgba(0, 0, 0, 0.6);
-        margin-bottom: 32px;
-    }
-    
-    .email-form-info {
-        display: flex;
-        flex-wrap: wrap;
-        grid-gap: 16px;
-    }
-    
-    .email-form-field {
-        width: 320px;
-        height: 52px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        color: #0D0E14;
-    }
-    
-    .button-form-field {
-        width: 125px;
-        height: 52px;
-        left: 336px;
-        top: 0px;
-        border-radius: 4px;
-        box-shadow: 0px -1px 4px 0px #00000029 inset;
-        background: #B794F4;
-        box-shadow: 0px -1px rgba(0, 0, 0, 0.16) inset;
-        border-radius: 4px;
-        border: 0;
-        text-decoration: none;
-        color: #fff;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-        cursor: pointer;
-    }
-    
-    .button-form-field:hover,
-    .button-form-field:active,
-    .button-form-field:focus {
-        background: #6249ab
-    }
-    
-    .intro_pic {
-        width: 708px;
-        height: 850px;
-    }
-    /* Intro styles end */
-    /* Logos styles start */
-    
-    .logos {
-        margin-bottom: 204px;
-    }
-    
-    .logos_wrap {
-        max-width: 1440px;
-        position: relative;
-    }
-    
-    .logos_desc {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 32px;
-        align-items: center;
-    }
-    
-    .logos_title {
-        width: 634px;
-        height: 120px;
-        font-weight: 700;
-        font-size: 40px;
-        line-height: 56px;
-        margin-bottom: 64px;
-        padding-left: 70px;
-    }
-    
-    .logos_subtitle {
-        width: 634px;
-        height: 72px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 0.32px;
-        color: rgba(0, 0, 0, 0.6);
-        margin-bottom: 104px;
-        padding-right: 70px;
-    }
-    
-    .logos_cards {
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        grid-row-gap: 20px;
-        width: 1300px;
-        height: 164px;
-    }
-    
-    .logos_cards-line {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-column-gap: 12px;
-    }
-    
-    .logos_card {
-        border-radius: 10px;
-        border-color: #A1AEBF;
-        padding: 16px, 24px, 16px, 24px;
-    }
-    
-    .logos_card-thumb-first {
-        padding-left: 70px;
-    }
-    
-    .logos_card-thumb-last {
-        padding-right: 70px;
-    }
-    /* Logos styles end */
+        
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+        
+        body {
+            line-height: 1;
+        }
+        
+        ol,
+        ul {
+            list-style: none;
+        }
+        
+        blockquote,
+        q {
+            quotes: none;
+        }
+        
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        /* archivo-regular - latin */
+        
+        @font-face {
+            font-family: 'Archivo';
+            font-style: normal;
+            font-weight: 400;
+            src: url('../fonts/archivo-v16-latin-regular.eot');
+            /* IE9 Compat Modes */
+            src: local(''), url('../fonts/archivo-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('../fonts/archivo-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+            url('../fonts/archivo-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+            url('../fonts/archivo-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('../fonts/archivo-v16-latin-regular.svg#Archivo') format('svg');
+            /* Legacy iOS */
+        }
+        /* archivo-500 - latin */
+        
+        @font-face {
+            font-family: 'Archivo';
+            font-style: normal;
+            font-weight: 500;
+            src: url('../fonts/archivo-v16-latin-500.eot');
+            /* IE9 Compat Modes */
+            src: local(''), url('../fonts/archivo-v16-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('../fonts/archivo-v16-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+            url('../fonts/archivo-v16-latin-500.woff') format('woff'), /* Modern Browsers */
+            url('../fonts/archivo-v16-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('../fonts/archivo-v16-latin-500.svg#Archivo') format('svg');
+            /* Legacy iOS */
+        }
+        /* archivo-600 - latin */
+        
+        @font-face {
+            font-family: 'Archivo';
+            font-style: normal;
+            font-weight: 600;
+            src: url('../fonts/archivo-v16-latin-600.eot');
+            /* IE9 Compat Modes */
+            src: local(''), url('../fonts/archivo-v16-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('../fonts/archivo-v16-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+            url('../fonts/archivo-v16-latin-600.woff') format('woff'), /* Modern Browsers */
+            url('../fonts/archivo-v16-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('../fonts/archivo-v16-latin-600.svg#Archivo') format('svg');
+            /* Legacy iOS */
+        }
+        /* archivo-700 - latin */
+        
+        @font-face {
+            font-family: 'Archivo';
+            font-style: normal;
+            font-weight: 700;
+            src: url('../fonts/archivo-v16-latin-700.eot');
+            /* IE9 Compat Modes */
+            src: local(''), url('../fonts/archivo-v16-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('../fonts/archivo-v16-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+            url('../fonts/archivo-v16-latin-700.woff') format('woff'), /* Modern Browsers */
+            url('../fonts/archivo-v16-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('../fonts/archivo-v16-latin-700.svg#Archivo') format('svg');
+            /* Legacy iOS */
+        }
+        
+        html {
+            box-sizing: border-box;
+        }
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+        
+        body {
+            font-family: 'Archivo';
+            font-style: normal;
+            font-weight: normal;
+            color: #0D0E14;
+            background-color: #FBFDFE;
+        }
+        
+        .wrapper {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .header {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 92px;
+            transition: .2s linear;
+        }
+        
+        .header__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-top: 26px;
+        }
+        
+        .header__logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header__list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .header__item {
+            margin-right: 24px;
+        }
+        
+        .header__item:last-child {
+            margin-right: 0;
+        }
+        
+        .header__link {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        #plans {
+            top: 7.4px;
+            left: 5.63px;
+            border: 0;
+        }
+        
+        .header__link:hover,
+        .header__link:focus,
+        .header__link:active {
+            opacity: .75;
+        }
+        
+        .button_thumb {
+            width: 130px;
+            height: 44px;
+            left: 0px;
+            top: 0px;
+            border-radius: 4px;
+            box-shadow: 0px -1px 4px 0px #00000029 inset;
+            background: #B794F4;
+            box-shadow: 0px -1px rgba(0, 0, 0, 0.16) inset;
+            border-radius: 4px;
+            border: 0;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        
+        .button_thumb:hover,
+        .button_thumb:active,
+        .button_thumb:focus {
+            background: #6249ab
+        }
+        /* Header styles end */
+        /* Intro styles start */
+        
+        .intro {
+            margin-bottom: 120px;
+        }
+        
+        .intro_wrap {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 39px;
+            align-items: center;
+            background: url(../img/background-vector.jpg) no-repeat center;
+        }
+        
+        .intro_info {
+            width: 523x;
+            height: 388px;
+            top: 231px;
+            padding-left: 70px;
+        }
+        
+        .intro_title {
+            width: 523px;
+            height: 240px;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 80px;
+            margin-bottom: 16px;
+        }
+        
+        .intro_subtitle {
+            width: 523px;
+            height: 48px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 32px;
+        }
+        
+        .email-form-info {
+            display: flex;
+            flex-wrap: wrap;
+            grid-gap: 16px;
+        }
+        
+        .email-form-field {
+            width: 320px;
+            height: 52px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #0D0E14;
+        }
+        
+        .button-form-field {
+            width: 125px;
+            height: 52px;
+            left: 336px;
+            top: 0px;
+            border-radius: 4px;
+            box-shadow: 0px -1px 4px 0px #00000029 inset;
+            background: #B794F4;
+            box-shadow: 0px -1px rgba(0, 0, 0, 0.16) inset;
+            border-radius: 4px;
+            border: 0;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        
+        .button-form-field:hover,
+        .button-form-field:active,
+        .button-form-field:focus {
+            background: #6249ab
+        }
+        
+        .intro_pic {
+            width: 708px;
+            height: 850px;
+        }
+        /* Intro styles end */
+        /* Logos styles start */
+        
+        .logos {
+            margin-bottom: 204px;
+        }
+        
+        .logos_wrap {
+            max-width: 1440px;
+            position: relative;
+        }
+        
+        .logos_desc {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 32px;
+            align-items: center;
+        }
+        
+        .logos_title {
+            width: 634px;
+            height: 120px;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 56px;
+            margin-bottom: 64px;
+            padding-left: 70px;
+        }
+        
+        .logos_subtitle {
+            width: 634px;
+            height: 72px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.32px;
+            color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 104px;
+            padding-right: 70px;
+        }
+        
+        .logos_cards {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-row-gap: 20px;
+            width: 1300px;
+            height: 164px;
+        }
+        
+        .logos_cards-line {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-column-gap: 12px;
+        }
+        
+        .logos_card-thumb-first {
+            padding-left: 70px;
+        }
+        
+        .logos_card-thumb-last {
+            padding-right: 70px;
+        }
+        /* Logos styles end */
+        /* Offers styles start */
+        
+        .offers {
+            position: relative;
+            margin-bottom: 168px;
+        }
+        
+        .offers_wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            gap: 32px;
+            width: 1300px;
+            height: 400px;
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+        
+        .offers_desc {
+            width: 634px;
+            height: 152px;
+            top: 0;
+            left: 333px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .offers_title {
+            width: 634px;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 56px;
+            margin-bottom: 24px;
+        }
+        
+        .offers_info {
+            width: 634px;
+            height: 72px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.32px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .offers_cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 32px;
+            padding: 0px, 111px, 0px, 111px;
+            padding-left: 181px;
+            padding-right: 181px;
+        }
+        
+        .offers_card {
+            width: 338px;
+            height: 208px;
+            border-radius: 10px;
+            border: 1px #A1AEBF;
+            border-style: solid;
+            padding: 20px;
+        }
+        
+        .offers_card-pic {
+            width: 40px;
+            height: 40px;
+            top: 4px;
+            left: 4px;
+            margin-bottom: 16px;
+        }
+        
+        .offers_card-title {
+            width: 298px;
+            top: 80px;
+            left: 20px;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 36px;
+            margin-bottom: 12px;
+        }
+        
+        .offers_card-desc {
+            width: 298px;
+            height: 40px;
+            top: 128px;
+            left: 20px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.32px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+        /* Offers styles end */
+        /* Offers styles end */
+        /* Offers styles end */
