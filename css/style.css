@@ -283,13 +283,12 @@
             top: 0px;
             border-radius: 4px;
             box-shadow: 0px -1px 4px 0px #00000029 inset;
-            background: #B794F4;
+            background: url(../img/svg/vector1.svg) no-repeat 90% center #B794F4;
             box-shadow: 0px -1px rgba(0, 0, 0, 0.16) inset;
             border-radius: 4px;
             border: 0;
             text-decoration: none;
             color: #fff;
-            font-weight: 500;
             font-size: 16px;
             line-height: 20px;
             cursor: pointer;
@@ -451,7 +450,6 @@
         /* Offers styles start */
         
         .offers {
-            position: relative;
             margin-bottom: 168px;
         }
         
@@ -459,7 +457,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: absolute;
             gap: 32px;
             width: 1300px;
             height: 400px;
@@ -542,5 +539,73 @@
             color: rgba(0, 0, 0, 0.6);
         }
         /* Offers styles end */
-        /* Offers styles end */
-        /* Offers styles end */
+        /* Internet styles start */
+        
+        .internet {
+            margin-bottom: 160px;
+        }
+        
+        .internet_wrap {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 139px;
+            align-items: center;
+        }
+        
+        .internet_info {
+            width: 523x;
+            height: 284px;
+            top: 257px;
+            padding-left: 70px;
+        }
+        
+        .internet_title {
+            width: 523px;
+            height: 112px;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 56px;
+            margin-bottom: 16px;
+        }
+        
+        .internet_desc {
+            width: 523px;
+            height: 72px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 32px;
+        }
+        
+        .button_form {
+            width: 99px;
+            height: 52px;
+            left: 0px;
+            top: 0px;
+            border-radius: 4px;
+            box-shadow: 0px -1px 4px 0px #00000029 inset;
+            background: url(../img/svg/vector2.svg) no-repeat 80% center#B794F4;
+            box-shadow: 0px -1px rgba(0, 0, 0, 0.16) inset;
+            border-radius: 4px;
+            border: 0;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        
+        .button_form:hover,
+        .button_form:active,
+        .button_form:focus {
+            background: #6249ab
+        }
+        
+        .internet_pic {
+            width: 638px;
+            height: 638px;
+            padding-right: 70px;
+        }
+        /* Internet styles end */
