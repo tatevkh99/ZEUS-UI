@@ -354,6 +354,8 @@
             line-height: 20px;
             color: #0D0E14;
             background: transparent url(../img/svg/@-icon.svg) no-repeat 96% center;
+            border-radius: 4px;
+            border: 1px solid #0D0E14;
         }
         
         .button-form-field {
@@ -1055,6 +1057,8 @@
             line-height: 20px;
             color: #0D0E14;
             background: url(../img/svg/@-icon.svg) no-repeat 96% center;
+            border-radius: 4px;
+            border: 1px solid #0D0E14;
         }
         
         .subscribers_button-form-field {
@@ -1082,3 +1086,116 @@
             background: #6249ab
         }
         /* Subscribers styles end */
+        /* Footer styles start */
+        
+        .footer_wrap {
+            margin-bottom: 40px;
+            max-width: 1440px;
+            height: 466px;
+        }
+        
+        .footer_columns {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr auto);
+            grid-gap: 175px;
+            width: 1300px;
+            height: 246px;
+            padding-left: 70px;
+            padding-right: 70px;
+            margin-bottom: 80px;
+        }
+        
+        .footer_column {
+            display: flex;
+            flex-direction: column;
+            width: 89px;
+            gap: 24px;
+        }
+        
+        .footer_column-logo {
+            width: 400px;
+            height: 172px;
+            gap: 24px;
+        }
+        
+        .footer_column-title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 26px;
+        }
+        
+        .footer_column-link {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: rgba(0, 0, 0, 0.6);
+            text-decoration: none;
+        }
+        
+        .footer_info {
+            width: 400px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.32px;
+            color: rgba(0, 0, 0, 0.6);
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+        
+        .footer_email-form-info {
+            display: flex;
+            grid-gap: 8px;
+        }
+        
+        .footer_email-form-field {
+            width: 290px;
+            height: 44px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #0D0E14;
+            background: url(../img/svg/@-icon.svg) no-repeat 96% center;
+            border-radius: 4px;
+            border: 1px solid #0D0E14;
+        }
+        
+        .footer_button-form-field {
+            width: 101px;
+            height: 44px;
+            border-radius: 4px;
+            box-shadow: 0px -1px 4px 0px #00000029 inset;
+            background: #B794F4;
+            box-shadow: 0px -1px rgba(0, 0, 0, 0.16) inset;
+            border-radius: 4px;
+            border: 0;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        
+        .footer_button-form-field:hover,
+        .footer_button-form-field:active,
+        .footer_button-form-field:focus {
+            background: #6249ab
+        }
+        
+        .footer_links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            width: 1300px;
+            height: 20px;
+        }
+        
+        .footer_link {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: rgba(0, 0, 0, 0.6);
+            text-decoration: none;
+        }
+        /* Footer styles end */
